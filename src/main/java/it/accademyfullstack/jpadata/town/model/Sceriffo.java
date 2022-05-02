@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Sceriffo {
@@ -12,7 +13,9 @@ public class Sceriffo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String nome;
-
+	@OneToOne
+	private Villaggio villaggio;
+	
 	public long getId() {
 		return id;
 	}

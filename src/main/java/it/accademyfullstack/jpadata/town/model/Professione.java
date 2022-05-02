@@ -1,9 +1,12 @@
 package it.accademyfullstack.jpadata.town.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Professione {
@@ -13,6 +16,9 @@ public class Professione {
 	private long id;
 
 	private String titolo;
+	
+	@ManyToMany(mappedBy = "professioni")
+	private List <Abitante> abitanti;
 
 	@Override
 	public String toString() {
