@@ -15,13 +15,9 @@ public class Sceriffo {
 	private String nome;
 	@OneToOne
 	private Villaggio villaggio;
-	
+
 	public long getId() {
 		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	@Override
@@ -35,6 +31,14 @@ public class Sceriffo {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Villaggio getVillaggio() {
+		return villaggio;
+	}
+
+	public void setVillaggio(Villaggio villaggio) {
+		this.villaggio = villaggio;
 	}
 
 }

@@ -16,12 +16,12 @@ public class Abitante {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String nome;
-	
+
 	@ManyToOne
 	private Abitazione abitazione;
-	
+
 	@ManyToMany
-	private List <Professione> professioni;
+	private List<Professione> professioni;
 
 	public long getId() {
 		return id;
@@ -44,4 +44,21 @@ public class Abitante {
 		this.nome = nome;
 	}
 
+	public Abitazione getAbitazione() {
+		return abitazione;
+	}
+
+	public void setAbitazione(Abitazione abitazione) {
+		this.abitazione = abitazione;
+	}
+
+	public List<Professione> getProfessioni() {
+		return professioni;
+	}
+
+	public void setProfessioni(List<Professione> professioni) {
+		this.professioni = professioni;
+	}
+
+	
 }

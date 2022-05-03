@@ -15,13 +15,13 @@ public class Abitazione {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@ManyToOne
 	private Villaggio villaggio;
-	
+
 	@OneToMany(mappedBy = "abitazione")
-	private List <Abitante> abitanti;
-	
+	private List<Abitante> abitanti;
+
 	private String indirizzo;
 
 	@Override
@@ -43,5 +43,15 @@ public class Abitazione {
 
 	public void setId(long id) {
 		this.id = id;
+
 	}
+
+	public Villaggio getVillaggio() {
+		return villaggio;
+	}
+
+	public void setVillaggio(Villaggio villaggio) {
+		this.villaggio = villaggio;
+	}
+
 }
